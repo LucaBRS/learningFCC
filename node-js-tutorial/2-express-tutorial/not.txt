@@ -1,0 +1,5 @@
+ricordare come funziona il broswere. 
+una volta che collego la home page con il http, qualunque file che è collegato all index,
+il broswere farà la get di quei file e questa cosa va gestit!
+
+Express lo fa per noi ma x capire vedi 1-pure-hhtp-request.js

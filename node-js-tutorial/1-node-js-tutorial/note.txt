@@ -1,0 +1,20 @@
+https://course-api.com
+
+(test if .gitignore funziona!)
+
+#####################
+        NPM
+
+le dipendenze servono e "npm init" da una mano a crearle.
+è imortante farlo cosi viene creato il json file utile per vedere el dipendenze e come vengono installate/usate
+
+*Jason è importante anche quando si condivide progetto con altre persone!
+
+nodemon non serve in produzione quindi lo mettiamo "devDependencie" con npm install nodemon -d
+ed è meglio cosi che ci serve solo per qualche test!
+#####################
+
+#####################
+NodeJS event looop
+
+Vedere dei video che sono importanti!!! e vedere https://course-api.com
