@@ -1,0 +1,129 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(198, 22, 22);
+  font-family: 'Lato', sans-serif;
+}
+
+#page-wrapper {
+  position: relative;
+}
+  
+.btn{
+    text-transform: uppercase;
+    border: 5px green solid;
+    border-radius: 5px;
+    background-color: aqua;
+    cursor: crosshair;
+}
+
+
+
+.grid {
+    display: flex;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  min-height: 75px;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #eee;
+  width: 100%;
+}
+
+/* .header-title {
+  width: 60vw;
+} */
+
+.header-title >img{
+  width: 15%;
+}
+
+
+nav > ul {
+    width: 35vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+  }
+
+  .form-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 200px;
+    margin-top: 50px;
+  } 
+
+.icona-img {
+  width: 40px;
+}
+
+
+#vendita .icona {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30%;
+}
+
+#vendita .descrizione {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center; 
+  color: blue;
+  width: 40%;
+}
+
+#video-section{
+   display: flex; 
+ justify-content: center;
+ margin-top: 50px;
+}
+
+#video-section > iframe{
+  max-width: 560px;
+  width: 100%;
+}
+
+#prezzi{
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.grid-2{
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px 0 20px;
+  align-items: center;
+  border-color: black;
+  border-style:solid ;
+  border-radius: 10%;
+}
+
+.grid-2 > h2{
+  background-color: yellow;
+  border-radius: 10%;
+}
+
+@media (max-width: 800px){
+  #video-section{
+    visibility: hidden;
+  }
+}
