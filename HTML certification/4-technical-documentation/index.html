@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./static/style.css">
+</head>
+<body>
+   <header id="header" class="header">
+        <h1>DOCUMENTATION</h1>
+   </header> 
+
+   <nav id="navbar">
+       <header class="menu-title">CSS display property</header>
+       <ul>
+           <li><a class="nav-link" href="#Definizione">Definizione</a></li>
+           <li><a class="nav-link" href="#Broswere">Broswere</a></li>
+           <li><a class="nav-link" href="#Proprietà">Proprietà</a></li>
+           <li><a class="nav-link" href="#Primo_Esempio">Primo Esempio</a></li>
+           <li><a class="nav-link" href="#Secondo_Esempio">Secondo Esempio</a></li>
+       </ul>
+
+   </nav>
+
+   <main id="main-doc">
+       <section id="Definizione" class="main-section">
+           <header><h2>Definizione</h2></header>
+           <article>
+               <p>The display property specifies the display behavior (the type of rendering box) of an element.</p>
+                
+                <p>In HTML, the default display property value is taken from the HTML specifications or from the 
+                browser/user default style sheet. The default value in XML is inline, including SVG elements.</p>
+                  <p>qua vediamo la dichiarazione di diversi tipi di display</p>
+                    <ul>
+                      <li><code> p.ex1 {display: none;}</code></li> 
+                      <li><code>p.ex2 {display: inline;}</code></li> 
+                      <li><code>p.ex3 {display: block;}</code></li>
+                      <li><code>p.ex4 {display: inline-block;}</code></li>
+                      <li><code>p.ex4 {display: inline-block;}</code></li>
+                    </ul>
+                
+           </article>
+       </section>
+
+       <section id="Broswere" class="main-section">
+          <header><h2>Broswere</h2></header>
+          <article>
+              <p>The numbers in the table specify the first browser version that fully supports the property.</p>
+            <p><b>Note:</b>The values "flex" and "inline-flex" requires the -webkit- prefix to work in Safari.</p>
+            <p><b>Note:</b>"display: contents" does not work in Edge prior version 79.</p>
+          </article>
+        </section>
+
+        <section id="Proprietà" class="main-section">
+            <header><h2>Proprietà</h2></header>
+            <p>
+                Quan viene spiegato alcune proprietà del Display
+            </p>
+            <p>sintassi:</p>
+            <code>display: value;</code>
+            <div>  </div>
+            <div>
+                <table>
+                    <tr>
+                        <th>Value</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>inline</td>
+                        <td>Displays an element as an inline element. 
+                            Any height and width properties will have no effect</td>
+                    </tr>
+                    <tr>
+                        <td>block</td>
+                        <td>Displays an element as a block element. 
+                            It starts on a new line, and takes up the whole width</td>
+                    </tr>
+                    <tr>
+                        <td>flex</td>
+                        <td>Displays an element as a block-level flex container</td>
+                    </tr>
+                    <tr>
+                        <td>grid</td>
+                        <td>Displays an element as a block-level grid container</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section id="Primo_Esempio" class="main-section">
+            <header><h2>Primo Esempio</h2></header>
+            <p>primo esempio</p>
+
+         <code>
+            .a {
+                display: contents;
+                border: 2px solid red;
+                background-color: #ccc;
+                padding: 10px;
+                width: 200px;
+            }
+            
+            .b {
+                border: 2px solid blue;
+                background-color: lightblue;
+                padding: 10px;
+            }
+        </code>
+                
+            </article>
+        </section>
+
+        <section id="Secondo_Esempio" class="main-section">
+            <header><h2>Secondo Esempio</h2></header>
+            <p>secondo esempio</p>
+
+                <code>
+                        body {
+                            display: inline;
+                        }
+                        
+                        p {
+                            display: inherit;
+                        }
+                    </code>
+
+                    <code>
+                        div {
+                        display: flex;
+                        flex-direction: row-reverse;
+                        }
+                    </code>
+                
+            </article>
+        </section>
+
+   </main>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
