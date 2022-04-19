@@ -1,0 +1,115 @@
+
+
+/*declaration variable! for color*/
+:root {
+    --main-white: #f0f0f0;
+    --main-red: #be3144;
+    --main-blue: #45567d;
+    --main-gray: #303841;
+  }
+
+
+/* box-sizing and font sizing */
+* {
+  box-sizing: inherit;
+}
+
+
+/* Base reset */
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+html {
+    box-sizing: border-box;
+  
+    /* Set font size for easy rem calculations
+     * default document font size = 16px, 1rem = 16px, 100% = 16px
+     * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+    */
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem; /* 18px */
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--main-white);
+  }
+
+ul {
+    list-style: none;
+  }
+
+
+/*NAVIGAZIONE*/  
+
+#navbar {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--main-red);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+    z-index: 10;
+
+  }
+
+.nav-list {
+    display: flex;
+    margin-right: 2rem;
+  }
+
+.nav-list a {
+    text-decoration: none;
+    color: var(--main-white);
+    font-size: 2.2rem;
+    display: block;/*QUESTO PERMETTE DI FARE IN MODO CHE IL #NAVBAR si adatti alla grandezza dell "A"*/
+   
+    padding: 2rem;
+  }
+
+
+.nav-list a:hover {
+    background: var(--main-blue);
+  }
+.nav-list p{
+    color: var(--main-red);
+}
+
+#welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+  }
+
+#welcome-section h1{
+    font-size: 11rem;
+}
+/*NAVIGAZIONE*/
+
+/*PROFILO*/
+#profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20rem;
+    background-color: var(--main-blue);
+}
+
+#profile a{
+    color: var(--main-white);
+    font-size: 2.2rem;
+    padding: 2rem;
+}
