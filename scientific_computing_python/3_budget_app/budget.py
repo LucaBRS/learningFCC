@@ -3,7 +3,7 @@
 # le eventuali variabili della classe stessa
 
 from calendar import leapdays
-from numpy import integer, outer
+from numpy import dot, integer, outer
 
 
 class Category:
@@ -96,8 +96,12 @@ class Category:
 
         return budget
 
-
-
+    def get_withdrow(self):
+        totalWithdrow = 0
+        for operation in self.ledger:
+            if operation["amount"] < 0 and operation["description"].find("Transfer") == -1:
+                totalWithdrow = totalWithdrow + abs(operation["amount"])
+        return totalWithdrow
 
     def stampa(self):
         print("funzione stampa:")
@@ -109,6 +113,59 @@ class Category:
         
 
 def create_spend_chart(categories):
-    return "b"
+    percList = ['100| ', ' 90| ', ' 80| ', ' 70| ', ' 60| ', ' 50| ', ' 40| ', ' 30| ', ' 20| ', ' 10| ', '  0| ']
+    oList = ["   ","   ","   ","   ","   ","   ","   ","   ","   ","   ","   "]
+    oLists = []
+    dotString= "    "
+    moneySpent = []
+    total = 0
+    output=""
+    longhestCategoryName = 0
+    output = "Percentage spent by category\n"
+    for category in categories:
+        
+        total = total + category.get_withdrow()
+        moneySpent.append(category.get_withdrow())
+        
+        if longhestCategoryName < len(category.category):
+            longhestCategoryName = len(category.category)
+            
+        dotString = dotString +"---"      
+    dotString = dotString + "-\n"
+    
+    ## creation  of o list
+    for money in moneySpent:
+        
+        oList = ["   ","   ","   ","   ","   ","   ","   ","   ","   ","   ","   "]
+        percentage = int(round(10*money/total))
+        if percentage == 1:
+            percentage=0
+        for i in range(percentage+1):
+            oList[-i-1] = "o  "
+            
+        oLists.append(oList)       
+    
+    ## creation parto of output
+    for i in range(11):
+        output = output + percList[i]
+        
+        for y in range(len(categories)):
+           output = output + oLists[y][i]
+           
+        output = output + "\n"
+    output = output + dotString 
+    
+    for i in range(longhestCategoryName):
+        output = output + "     "
+        
+        for category in categories:
+            try:
+                output = output + category.category[i] + "  " 
+            except:
+                output = output + " " + "  " 
+         
+        output = output + "\n"
+        
+    return output[:len(output)-1]
 
 
