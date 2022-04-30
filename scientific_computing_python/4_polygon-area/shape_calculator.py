@@ -30,9 +30,11 @@ class Rectangle:
     def get_picture(self):
         output = ""
         
+        ## if is too big i will not draw it
         if self.height > 50 or self.width > 50:
             return "Too big for picture."
         else:
+            ## for cycle to "scan" the column adn put a *, next scan the line to put a \n
             for i in range(self.height):
                 for j in range(self.width):
                     output = output + "*"    
@@ -42,19 +44,24 @@ class Rectangle:
 
     def get_amount_inside(self, shape):
         amount= 0
+        ## i need those fo working and "scannig" the height and width of the shape with tha "changing" passed shape
         passedHeight = shape.height
         passedWidth = shape.width
+        
         column = True
         line = True
         
         while line:
             while column:
+                ## if the difference of the shape with the passed shape id True
                 if (self.height - passedHeight) >= 0 and (self.width - passedWidth) >= 0 : 
                     amount +=1
+                    ## thease help me to "scan" the shape incrementing the width of the passed shape. 
+                    ## basically i consider the with as a block and "move the block" of the passed shape width
                     passedWidth = passedWidth + shape.width
                 else:
                     column = False
-                    
+                
             if (self.height - passedHeight) >= 0:
                 column = True
                 passedWidth = shape.width
