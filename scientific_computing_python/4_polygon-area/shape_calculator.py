@@ -61,7 +61,7 @@ class Rectangle:
                     passedWidth = passedWidth + shape.width
                 else:
                     column = False
-                
+            ## if is true i reset the column flag and the passedWidth to scan again, BUT incermenting the passedHeight    
             if (self.height - passedHeight) >= 0:
                 column = True
                 passedWidth = shape.width
