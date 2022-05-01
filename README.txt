@@ -17,5 +17,6 @@ https://www.freecodecamp.org/ **************************************************
 ***********************************************************************************************************************
 
 
--Done the Responsive Web Design Course no the certification
+-Done the Responsive Web Design Course
 -Done NodeJs-Express course: https://www.youtube.com/watch?v=Oe421EPjeBE&t=19903s&ab_channel=freeCodeCamp.org
+-Done Scientific Computing Python
