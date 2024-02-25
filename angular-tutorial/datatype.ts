@@ -34,3 +34,25 @@ let result = numList.filter((num: number) => num > 2);
 let num = numList.find((num) => num === 2);
 console.log(result)
 console.log(num)
+
+//ENUM
+
+const enum Color { //declaring cost do help out to trim the code in js
+    Red,
+    Green,
+    Blue
+}
+
+let c: Color = Color.Blue;
+
+// TOUPLE
+
+let swapNumbs: [number, number];
+
+function swapNumbers(num1: number, num2: number): [number, number] {
+    return [num2, num1];
+}
+
+swapNumbs = swapNumbers(12, 30)
+
+
