@@ -12,7 +12,7 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "hinv", //this is important!!!! foe each tag or componenent to differentiate form other u add a prefix as app or u can choose it
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
